@@ -37,6 +37,8 @@ for config in configs:
             entry = line.strip()
             if entry:
                 row = re.split(r" {2,}", entry)
+                # Some times contain invalid characters
+                row[1] = re.sub("[^0-9:]", "", row[1])
                 # We have to make sure all fields are here
                 if len(row) == 8:
                     row += config['extra']
