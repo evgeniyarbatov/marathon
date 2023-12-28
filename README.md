@@ -1,2 +1,3 @@
-# marathon
-Looking at data on marathon times
+# marathon data
+
+Learn from marathon results.
