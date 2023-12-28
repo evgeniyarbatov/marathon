@@ -37,5 +37,7 @@ for config in configs:
             entry = line.strip()
             if entry:
                 row = re.split(r" {2,}", entry)
-                row += config['extra']
-                writer.writerow(row)
+                # We have to make sure all fields are here
+                if len(row) == 8:
+                    row += config['extra']
+                    writer.writerow(row)
